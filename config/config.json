@@ -1,7 +1,7 @@
 {
     "development": {
         "username": "root",
-        "password": "Vantage0",
+        "password": "password",
         "database": "burgers_db",
         "host": "127.0.0.1",
         "dialect": "mysql"
@@ -14,11 +14,7 @@
         "dialect": "mysql"
     },
     "production": {
-        "username": "root",
-        "password": "Vantage0",
-        "database": "burgers_db",
         "use_env_variable": "JAWSDB_URL",
-        "host": "127.0.0.1",
         "dialect": "mysql"
     }
 }
