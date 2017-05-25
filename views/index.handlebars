@@ -8,7 +8,7 @@
     </div>
 
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-7">
         <h2>Uneaten</h2>
             
                 {{#each burgers}}
@@ -19,7 +19,7 @@
                                     {{this.id}}. {{this.name}}
                                 </h3>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4" align="center">
                                 <form action="/{{this.id}}?_method=PUT" method="POST">
                                     <input type="hidden" name="devoured" value="true">
                                     <button type="submit">DEVOUR IT</button>
@@ -32,7 +32,7 @@
                    
         </div>
         
-        <div class="col-md-4">
+        <div class="col-md-5">
             <h2>Eaten</h2>
             
             {{#each burgers}}
