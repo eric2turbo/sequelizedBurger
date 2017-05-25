@@ -8,37 +8,42 @@
     </div>
 
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-8">
         <h2>Uneaten</h2>
-
-            <ul>
+            
                 {{#each burgers}}
                     {{#unless this.devoured}}
-                        <h3><li>
-                            {{this.name}}
-                            </h3>
-                            <form action="/{{this.id}}?_method=PUT" method="POST">
-                                <input type="hidden" name="devoured" value="true">
-                                <button type="submit">DEVOUR IT</button>
-                            </form>
-                            
-                        </li>
+                        <div class="row">
+                            <div class="col-md-8 uneaten" align="center">
+                                <h3>
+                                    {{this.id}}. {{this.name}}
+                                </h3>
+                            </div>
+                            <div class="col-md-4">
+                                <form action="/{{this.id}}?_method=PUT" method="POST">
+                                    <input type="hidden" name="devoured" value="true">
+                                    <button type="submit">DEVOUR IT</button>
+                                </form>
+                            </div>
+                        </div>  
                     {{/unless}}
-                {{/each}}
-            </ul>
+                {{/each}}  
+            
+                   
         </div>
-        <div class="col-md-6">
+        
+        <div class="col-md-4">
             <h2>Eaten</h2>
-            <ol>
-                {{#each burgers}}
-                    {{#if this.devoured}}
-                        <h3><li>
-                            {{this.name}}
-                        
-                        </li></h3>
-                    {{/if}}
-                {{/each}}
-            </ol>
+            
+            {{#each burgers}}
+                {{#if this.devoured}}
+                    <h3>
+                        {{this.id}}. {{this.name}}
+                    
+                    </h3>
+                {{/if}}
+            {{/each}}
+        
         </div>
     </div>
     <div class="row" align="center">
